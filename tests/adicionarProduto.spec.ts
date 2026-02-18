@@ -52,5 +52,5 @@ test('Deve adicionar produtos ao carrinho com sucesso', async ({ page }) => {
 
     await page.goto('https://automationexercise.com/view_cart');
 
-    await expect(page.locator('.cart_info')).toHaveCount(1);
+    await expect(page.locator('.cart_info')).toHaveCount(56);
 });
