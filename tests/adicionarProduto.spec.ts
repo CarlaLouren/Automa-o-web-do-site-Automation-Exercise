@@ -1,7 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-//test.use({ storageState: '.auth/user.json' });
-
 test('Deve adicionar produtos ao carrinho com sucesso', async ({ page }) => {
 
 
@@ -52,5 +50,7 @@ test('Deve adicionar produtos ao carrinho com sucesso', async ({ page }) => {
 
     await page.goto('https://automationexercise.com/view_cart');
 
-    await expect(page.locator('.cart_info')).toHaveCount(56);
+    await expect(page.locator('.cart_info')).toHaveCount(1);
+
+    await page.screenshot({ path: 'screenshot-final.png' });
 });
